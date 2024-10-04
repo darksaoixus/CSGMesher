@@ -3,8 +3,8 @@ extends EditorPlugin
 
 
 func _enter_tree() -> void:
-	print("CSGMesher enabled")
+    print("CSGMesher enabled")
 
 
 func _exit_tree() -> void:
-	print("CSGMesher disabled")
+    print("CSGMesher disabled")
