@@ -2,8 +2,6 @@
 class_name CSGSceneLoader
 extends Node3D
 
-var csg: CSGShape3D
-
 @export var csg_scene_file: PackedScene:
 	set(value):
 		csg_scene_file = value
@@ -33,7 +31,7 @@ func load_scene_callback() -> void:
 			push_warning("%s is not CSGShape3D! (Type: %s)" % [scene_instance.name, scene_instance.get_class()])
 			return
 		
-		csg = scene_instance as CSGShape3D
+		var csg := scene_instance as CSGShape3D
 		csg._update_shape()
 		
 		add_node_to_tree(csg)
